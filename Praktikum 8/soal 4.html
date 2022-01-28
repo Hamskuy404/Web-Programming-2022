@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Penjumlahan dua bilangan</title>
+    <script>
+        function hitung() {
+            let x = Number(document.getElementById('nilaiAwal').value);
+            let y = Number(document.getElementById('nilaiAkhir').value);
+            let z = x + y;
+            document.getElementById('nilaiHasil').value = z;
+        }
+    </script>
+</head>
+<body>
+    <input id="nilaiAwal" onchange="hitung()" type="number">
+    <P>+</P>
+    <input id="nilaiAkhir" onchange="hitung()" type="number">
+    <P>=</P>
+    <input id="nilaiHasil" type="number" readonly>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Picker</title>
+<style>
+    .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+    }
+
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .closebtn:hover {
+        color: black;
+    }
+</style>
+</head>
+<body>
+    
+    <label for="car">Sport Cars</label>
+    <select id="car">
+        <option value="r34">Skyline r34</option>
+        <option value="r35">Skyline r35</option>
+        <option value="s14">Silvia s14</option>
+        <option value="s15">Silvia s15</option>
+        <option value="mk4">Supra mk4</option>
+        <option value="ae86">AE86</option>
+    </select>
+    <button onclick="printpicture();doalert();">Print Picture</button>
+    
+    <img id="Picture" src="">
+
+    <script>
+        function doalert() {
+            if (car.value === 'r34') {
+                alert("Nissan Skyline GTR R34")
+            }
+
+            if (car.value === 'r35') {
+                alert("Nissan Skyline GTR R35")
+            }
+
+            if (car.value === 's14') {
+                alert("Nissan Silvia S14")
+            }
+
+            if (car.value === 's15') {
+                alert("Nissan Silvia S15")
+            }
+            
+            if (car.value === 'mk4') {
+                alert("Toyota Supra mk4")
+            }
+
+            if (car.value === 'ae86') {
+                alert("Toyota AE86 Trueno")
+            }
+        }
+        function printpicture() {
+            const car = document.getElementById('car');
+            const Picture = document.getElementById('Picture');
+
+            if (car.value === 'r34') {
+                Picture.src = 'https://cdn.tmpo.co/data/2020/04/05/id_928504/928504_720.jpg'
+            }
+
+            if (car.value === 'r35') {
+                Picture.src = 'https://img.inews.co.id/media/822/files/inews_new/2020/04/04/PSX_20200404_170946.jpg'
+            }
+
+            if (car.value === 's14'){
+                Picture.src = 'https://www.gettinlow.com/wp-content/uploads/2020/12/GLI9887.jpg'
+            }
+
+            if (car.value === 's15'){
+                Picture.src = 'https://upload.wikimedia.org/wikipedia/commons/9/99/Nissan_Silvia_S15_Rocket_Bunny.jpg'
+            }
+
+            if (car.value === 'mk4'){
+                Picture.src = 'https://imgcdnblog.carvaganza.com/wp-content/uploads/2021/05/26115749/1994-Toyota-Supra-2.jpg'
+            }
+
+            if (car.value === 'ae86'){
+                Picture.src = 'https://www.motorbiscuit.com/wp-content/uploads/2020/10/1986-JDM-Toyota-AE86-Sprinter-Trueno-GT-Apex.jpg'
+            }
+        }
+        
+    </script>
+</body>
+</html>

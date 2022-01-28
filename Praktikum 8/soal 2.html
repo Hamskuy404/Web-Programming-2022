@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kurs Rupiah</title>
+    <script>
+        function calculate(){
+            const dollar = 14650;
+            let rupiah = document.getElementById("rupiah").value;
+            console.log("rupiah : Rp. " + rupiah);
+            let hasil_dollar = rupiah / dollar
+            console.log("Dollar : $ " + hasil_dollar);
+            let total = document.getElementById("hasil");
+            total.innerHTML = " $ " + hasil_dollar;
+            }
+    </script>
+</head>
+<body>
+    <h3 style="font-family: sans-serif;">Menghitung Kurs Rupiah</h3>
+    <br>
+    <br>
+    Masukan Nilai Rupiah :
+    <input type="angka" value="" size="15" id="rupiah">
+    <br>
+    <button onclick="calculate()">Hasil</button>
+    <br>
+    <br>
+    Hasil :<span id="hasil"></span>
+</body>
+</html>
